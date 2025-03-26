@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FDF5E6; /* Fondo color crema */
+    background-image: url(https://media.istockphoto.com/id/1637095876/photo/selective-focus-wood-table-top-on-blur-kitchen-counter-background.jpg?s=612x612&w=0&k=20&c=JVgMIiQOerXWe77Kpb9WLGErhmJWZV7cUTjVdaujrmc=);
+    background-size: 2000px 1900px;
+    background-repeat: no-repeat;
+}
+
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+input[type=text]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=tel]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=checkbox]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    background-color: #E50185;
+    color: bisque;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=number]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit]:hover{
+    background-color: violet;
+}
+
+label{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+
+.titulito{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+.formdiv{
+    font-family: 'Indie Flower', cursive;
+    border-radius: 5px;
+    background: #ff69b4; /* Color rosa fuerte */
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.registros{
+    font-family: 'Reenie Beanie', cursive;
+    color: #D90368;
+    text-align: center;
+    font-size: 40px;
+}
+
+button[type=submit]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    background-color: #E50185;
+    color: bisque;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button a{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: bisque;
+}
+
+

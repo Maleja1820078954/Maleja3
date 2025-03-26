@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FDF5E6; /* Fondo color crema */
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D90368;
+    padding: 30px 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artemania {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 32px;
+    color: #d4af37;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.comercializadora {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    color: #fff; /* Mejor contraste */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+    color: #d4af37;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    min-width: 200px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu, .dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu a {
+    padding: 12px;
+    color: white;
+    display: block;
+}
+
+/* ======== CARRUSEL AUTOMÁTICO ======== */
+.slider-container {
+    max-width: 1200px;
+    height: 500px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 500%;
+    animation: slide 20s infinite ease-in-out; /* Transición más fluida */
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 20%; 
+    position: relative;
+    display: inline-block;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    font-family: 'Reenie Beanie', cursive;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    
+}
+
+
+/* ANIMACIÓN DEL CARRUSEL */
+@keyframes slide {
+    0%, 20% { transform: translateX(0%); }
+    25%, 40% { transform: translateX(-20%); }
+    45%, 60% { transform: translateX(-40%); }
+    65%, 80% { transform: translateX(-60%); }
+    85%, 100% { transform: translateX(-80%); }
+    95%, 120% { transform: translateX(-90%); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links a {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .slider-container {
+        height: 300px;
+    }
+    .slide img {
+        height: 300px;
+    }
+}
+
+/* ======== SOBRE NOSOTROS BREVE ======== */
+.about-us {
+    background-color: #fce4ec; /* Rosa suave para combinar con el fucsia */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+    
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 50px;
+    color: #D90368; /* Fucsia del navbar */
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 20px;
+    color: #333;
+    font-family: 'Indie Flower', cursive;
+    line-height: 1.6;
+}
+
+
+.about-image img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-image img {
+        width: 80%;
+    }
+}
+
+/* ======== PRODUCTOS DESTACADOS ======== */
+.productos-destacados {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FDF5E6;
+}
+.titulo-seccion {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 50px;
+    color: #D90368;
+    margin-bottom: 20px;
+}
+.categorias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.categoria {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+}
+.categoria img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+.categoria h3 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.btn {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #D90368;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #A00250;
+}
+
+/* ======== TESTIMONIOS CLIENTES ======== */
+.testimonios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdf5e6;
+}
+.testimonios h2 {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 50px;
+    color: #D90368;
+    margin-bottom: 20px;
+}
+.contenedor-testimonios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.testimonio {
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+.testimonio span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #444;
+    font-family: 'Indie Flower', cursive;
+}
+
+.testimonio p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+/* ======== POR QUÉ ELEGIRNOS ======== */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FDF5E6;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.why-choose-us h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 36px;
+    color: #D90368;
+    margin-bottom: 20px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    color: #444;
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background-color: #D90368;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-info,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.footer-social img {
+    width: 60px;
+    margin: 30px;
+    transition: 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-social h3{
+    font-size: 45px;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.contact-text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 23px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    background-color: #fdf5e6;
+    color: #D90368;
+}

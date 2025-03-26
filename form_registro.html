@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemanía MA - REGISTRO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form_registro.css"> 
+</head>
+<body>
+    <div class="formdiv">
+        <h1 class="registros">Registro Tipo Productos</h1><br>
+        <p class="titulito">"La mejor calidad, está con nosotros"</p><br>
+        <form action="tabla.html" method="GET">
+            <label for="fcod">ID*</label>
+            <input type="number" id="fcod" placeholder="Cod" required>
+            <br><br>
+            <label for="fnombre">Nombre*</label>
+            <input type="text" id="fnombre" placeholder="Nombre del producto" required>
+            <br><br>
+            <label for="fdescripcion">Descripción*</label>
+            <input type="text" id="descripcion" placeholder="Descripción del producto" required>
+            <br><br>
+            <label for="fmaterial">Material*</label>
+            <input type="text" id="fmaterial" placeholder="Tipo de material" required>
+            <br><br>
+            <label for="fprecio">Precio*</label>
+            <input type="number" name="precio" id="fprecio" placeholder="Precio aproximado"  required>
+            <br><br>
+            <label for="fdispo">Disponibilidad*</label>
+            <input type="text" id="fdispo" placeholder="Disponibilidad" required><br>
+            <br><br>
+            <button type="submit">Registrar</button>
+            
+        </form>
+    </div>
+</body>
+</html>

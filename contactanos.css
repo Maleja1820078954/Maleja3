@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #FDF5E6; /* Fondo color crema */
+    background-image: url(https://media.istockphoto.com/id/1637095876/photo/selective-focus-wood-table-top-on-blur-kitchen-counter-background.jpg?s=612x612&w=0&k=20&c=JVgMIiQOerXWe77Kpb9WLGErhmJWZV7cUTjVdaujrmc=);
+    background-size: 2000px 1700px;
+    background-repeat: no-repeat;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D90368;
+    padding: 30px 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artemania {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 32px;
+    color: #d4af37;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.comercializadora {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    color: #fff; /* Mejor contraste */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+    color: #d4af37;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    min-width: 200px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu, .dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu a {
+    padding: 12px;
+    color: white;
+    display: block;
+}
+
+/* ======== CARRUSEL AUTOMÁTICO ======== */
+.slider-container {
+    max-width: 1200px;
+    height: 500px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 500%;
+    animation: slide 20s infinite ease-in-out; /* Transición más fluida */
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 20%; 
+    position: relative;
+    display: inline-block;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    font-family: 'Reenie Beanie', cursive;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    
+}
+
+
+/* ANIMACIÓN DEL CARRUSEL */
+@keyframes slide {
+    0%, 20% { transform: translateX(0%); }
+    25%, 40% { transform: translateX(-20%); }
+    45%, 60% { transform: translateX(-40%); }
+    65%, 80% { transform: translateX(-60%); }
+    85%, 100% { transform: translateX(-80%); }
+    95%, 120% { transform: translateX(-90%); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links a {
+        padding: 10px;
+        font-size: 20px;
+    }
+    .slider-container {
+        height: 300px;
+    }
+    .slide img {
+        height: 300px;
+    }
+}
+
+
+/* FORMULARIO CONTACTÁNOS */
+input[type=text], select{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    background-color: #E50185;
+    color: bisque;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=email]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel]{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit]:hover{
+    background-color: violet;
+}
+
+label{
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+}
+
+textarea {
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    display: inline-block;
+    border: 1px  solid #E50185;
+    border-radius: 5px;
+    color: black;
+    box-sizing: border-box;
+}
+
+.formdiv{
+    font-family: 'Indie Flower', cursive;
+    border-radius: 5px;
+    background: #ff69b4; /* Color rosa fuerte */
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contactanos{
+    font-family: 'Reenie Beanie', cursive;
+    color: #D90368;
+    text-align: center;
+    font-size: 35px;
+}
+
+.titulito{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+/* ======== FOOTER ======== */
+.footer {
+    background-color: #D90368;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-info,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.footer-social img {
+    width: 60px;
+    margin: 30px;
+    transition: 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-social h3{
+    font-size: 45px;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.contact-text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 23px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    background-color: #fdf5e6;
+    color: #D90368;
+}
