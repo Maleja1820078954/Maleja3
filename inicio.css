@@ -17,6 +17,7 @@ body {
     background-color: #D90368;
     padding: 30px 40px;
     flex-wrap: wrap;
+    position: fixed;
 }
 
 .logo {
